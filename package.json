@@ -1,16 +1,17 @@
 {
   "name": "banner-of-nations-site",
   "version": "1.0.0",
-  "description": "Banner of Nations - Official Game Design Site",
+  "description": "Banner of Nations resmi web sitesi",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Kerem Karaman",
+  "license": "MIT"
 }
-
