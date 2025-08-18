@@ -1,1 +1,199 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Banner of Nations — Game Design</title>
+  <meta name="description" content="Banner of Nations - Büyük strateji + RTS. Tüm oyun tasarım belgesi ve özellikler.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img src="/assets/logo.png" alt="Banner of Nations" class="logo" onerror="this.style.display='none'">
+      <nav class="nav">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#features">Özellikler</a>
+        <a href="#systems">Sistemler</a>
+        <a href="#roadmap">Yol Haritası</a>
+        <a href="#tech">Teknik</a>
+        <a href="#notes">Notlar</a>
+        <a href="#team">Geliştiriciler</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Banner of Nations</h1>
+          <p>Büyük strateji + RTS + Taktik savaşlar — Diplomasi, ekonomi, teknoloji ve gerçek zamanlı taktik savaşlarla ülkeni yönet.</p>
+          <p class="muted">Erken Erişim: 15 Mart 2026 · Tam Sürüm: Temmuz 2026</p>
+        </div>
+        <div class="hero-media">
+          <img src="/assets/hero.jpg" alt="Banner of Nations hero" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Temel Özellikler</h2>
+        <ul class="features-list">
+          <li><strong>Büyük Strateji + RTS:</strong> Harita yönetimi, diplomasi, ekonomi, teknoloji ve gerçek zamanlı taktik savaş.</li>
+          <li><strong>Gerçek zamanlı savaşlar:</strong> Oyuncu ordularını doğrudan yönetebilir ve sahada taktiksel kararlar alır.</li>
+          <li><strong>Teknoloji evrimi:</strong> Orta Çağ -> Modern Çağ; kuşatma araçları zamanla değişir.</li>
+          <li><strong>Kapsamlı diplomasi:</strong> Savaş, barış, ittifak, ultimatom, vasallık, konsolosluk mekanikleri.</li>
+          <li><strong>Klan sistemi:</strong> Erken erişimde çevrimdışı klan, tam sürümde çevrimiçi klan savaşları.</li>
+          <li><strong>Not alma ve strateji paneli:</strong> Oyun içi planlama ve hedef takibi.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="systems" class="section dark-card">
+      <div class="container">
+        <h2>Sistemler (Detaylı)</h2>
+        <article>
+          <h3>Diplomasi Sistemi</h3>
+          <p>Savaş ilanı, barış, non-aggression paktları, ittifaklar, ultimatom, istihbarat, casusluk, başkonsolosluk, vassalizasyon ve rejim desteği gibi mekanikler.</p>
+        </article>
+
+        <article>
+          <h3>Ekonomi ve Yatırım</h3>
+          <p>Eğitim, istihdam, mutluluk, doğurganlık, enflasyon, vergi, üretim/tüketim, dış ticaret; fabrikalar, çiftlikler, hastaneler, okullar, baraj gibi yatırımlar.</p>
+        </article>
+
+        <article>
+          <h3>Savaş ve Askeri Sistem</h3>
+          <p>Gerçek zamanlı taktik savaşlar, kuşatma (kale, top, mancınık/catapults), asker isimlendirme, sahada medic sistemi ve asker yönetimi. Harita üzerinden asker sevkiyatı.</p>
+        </article>
+
+        <article>
+          <h3>Klan Sistemi</h3>
+          <p>Erken erişimde çevrimdışı klan yapısı; tam sürümde çevrimiçi klan savaşları, ligler ve klan merkezi.</p>
+        </article>
+
+        <article>
+          <h3>Not Alma ve Strateji Paneli</h3>
+          <p>Oyun içi notlar, hedef işaretleme ve planlama sekmeleri.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="diplomacy" class="section">
+      <div class="container">
+        <h2>Başkonsolosluk & İstihbarat (Önemli Oyun Mekanikleri)</h2>
+
+        <div class="note-box">
+          <h4>Başkonsolosluk — Yeni Save Sorgusu</h4>
+          <p>Oyuncu yeni açtığı save'de şu soruyla karşılaşır:</p>
+          <blockquote class="blockquote">
+            Başkentinize başkonsolosluk inşa etmek istiyor musunuz?
+            Eğer başkonsolosluk inşa etmezseniz masada söz sahibi olamazsınız ve belli başlı cezalar uygulanır:
+            Hiçbir ülkeyle diplomasi yapamazsınız (savaş, ittifak, ilişki geliştirme dahil — hepsi) ama onlar size savaş açabilir, ultimatom gönderebilir (ama siz görmezsiniz), ilişki kötüleyebilir (AI başkonsolosluk olmayan ülkelerle sık sık ilişkileri kötüleştirir ve hiç ilişki geliştirmez) ve bir savaşı siz bile kazanmış olsanız toprak, para ve kaynak kaybı yapan taraf yine siz olursunuz. Başkonsolosluk inşa etmediğiniz sürece itibarınız/prestijiniz düşer.
+          </blockquote>
+
+          <div class="consulate-trigger">
+            <button id="openConsulate" class="btn btn-primary">Başkonsolosluk Sorgusunu Göster</button>
+          </div>
+
+          <p class="muted">Popup otomatik olarak "yeni save" gibi davranır — sayfa ilk yüklendiğinde (ve localStorage temizse) görünür. Kullanıcı evet veya hayır seçebilir.</p>
+        </div>
+
+        <div class="note-box">
+          <h4>İstihbarat</h4>
+          <p>İstihbarat seviyesi arttıkça harita üzerinde diğer ülkelerin ordularını görmeye başlarsınız. Önce en güçsüz ülkenin birimlerini görürsünüz; istihbarat arttıkça giderek daha güçlü ülkeleri görürsünüz. İyi istihbarat, savaş sırasında ordulara moral ve hafif avantaj sağlar.</p>
+        </div>
+
+        <div class="note-box">
+          <h4>Destek Gönderme</h4>
+          <p>İlişkiler minimum +35 iken veya bir ülke ile savaş halindeyken para, kaynak ve asker gönderebilme mekanizması vardır.</p>
+        </div>
+
+        <div class="note-box">
+          <h4>Kaynaklar</h4>
+          <p>Örnek: "Ülke zeytin stoğu: 8 eyalet" — UI'da bu yazı ülkenin toplam zeytin stoğunu ve kaç eyalete o fabrika kurabileceğini gösterir.</p>
+        </div>
+
+        <div class="note-box">
+          <h4>Haritadan 3D Yakınlaştırma</h4>
+          <p>Çift tıklayınca şehir yakınlaştırması <em>Cities Skylines</em> benzeri 2.5D/3D gösterim planlanmıştır (erken erişim güncellemelerinde kademeli eklenecek).</p>
+        </div>
+
+        <div class="note-box">
+          <h4>Bina Görünümü</h4>
+          <p>Ekonomisi yüksek şehirlerde gökdelen/villa; küçük şehirlerde köy evleri ve küçük bahçeler görünür.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section dark-card">
+      <div class="container">
+        <h2>Geliştirme Takvimi</h2>
+        <ul>
+          <li>Eylül 2025: Kod altyapısı, harita işleme, diplomasi sistemi</li>
+          <li>Ekim-Aralık 2025: Ekonomi + asker sistemi, UI, beta savaşlar</li>
+          <li>Ocak-Şubat 2026: Tüm temel sistemlerin birleştirilmesi, test</li>
+          <li>15 Mart 2026: Erken Erişim</li>
+          <li>Nisan-Temmuz 2026: Aylık güncellemeler + tam sürüm hazırlığı</li>
+          <li>Temmuz 2026: Tam Sürüm Çıkışı</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tech" class="section">
+      <div class="container">
+        <h2>Teknoloji & Altyapı</h2>
+        <p>Unity (3D, URP) ile geliştiriliyor. Kod tamamen C# (manuel). Çoklu dil desteği planlanıyor (TR, EN, vb.).</p>
+        <h4>Teknik Gereksinimler (Tahmini)</h4>
+        <p><strong>Minimum:</strong> i5 7. nesil, 8 GB RAM, GTX 1050, 10 GB disk<br>
+           <strong>Önerilen:</strong> i7/Ryzen5, 16 GB RAM, GTX1660+/RTX3050+</p>
+      </div>
+    </section>
+
+    <section id="notes" class="section dark-card">
+      <div class="container">
+        <h2>Ek Notlar</h2>
+        <p>Bu belge aylık olarak güncellenecektir. Oyuncu geri bildirimleri sonraki GDD sürümlerine yansıtılacaktır.</p>
+        <h4>Verilen "diğer notlar" kısmı:</h4>
+        <pre class="note-pre">Başkonsolsluk: ... (dokümanda gönderdiğin tam metin burada korundu — popup ile sunulur)
+İstihbarat: ... (aynı içerik)
+Destek gönderme, kaynak göstergeleri, 3D yakınlaştırma ve bina farkları — tam olarak dokümanda belirtildiği gibi gösterilir.</pre>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container">
+        <h2>Geliştiriciler</h2>
+        <p>Hazırlayanlar: Kerem ve Takımı</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© Banner of Nations — Versiyon 1.0 — Ağustos 2025</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Başkonsolosluk Modal -->
+  <div id="consulateModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <h3>Başkonsolosluk İnşası</h3>
+      <p>Başkentinize başkonsolosluk inşa etmek istiyor musunuz? Eğer başkonsolosluk inşa etmezseniz masada söz sahibi olamazsınız ve belli başlı cezalar uygulanır:<br>
+      Hiçbir ülkeyle diplomasi yapamazsınız (savaş, ittifak, ilişki geliştirme dahil). Onlar size savaş açabilir, ultimatom gönderebilir (ama siz görmezsiniz), ilişki kötüleyebilir. Başkonsolosluk inşa etmediğiniz sürece itibarınız/prestijiniz düşer.</p>
+
+      <div class="modal-actions">
+        <button id="consYes" class="btn btn-accept">Evet <span class="tag recommended">Önerilen</span></button>
+        <button id="consNo" class="btn btn-decline">Hayır <span class="tag notrecommended">Önerilmeyen</span></button>
+      </div>
+
+      <p class="muted small">Seçiminiz bu tarayıcıda saklanacaktır (yeni save mantığı için localStorage). Bu popup ilk ziyaretlerde görünür.</p>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
 
