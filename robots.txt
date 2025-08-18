@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://banner-of-nations.onrender.com/sitemap.xml
