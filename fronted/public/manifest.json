@@ -1,1 +1,10 @@
+{
+  "name":"Banner of Nations",
+  "short_name":"Banner",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#07100f",
+  "theme_color":"#38b000",
+  "icons":[{"src":"/favicon.ico","sizes":"64x64","type":"image/x-icon"}]
+}
 
