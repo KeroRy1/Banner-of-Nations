@@ -11,8 +11,10 @@ app.get('/', (req, res) => {
 });
 
 // Google doğrulama dosyası route'u
-app.get('/google1234567890abcdef.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'google1234567890abcdef.html'));
+app.get('/googleaa1a9047867b85a7.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'googleaa1a9047867b85a7.html'));
+});
+
 });
 
 // Port ayarı
